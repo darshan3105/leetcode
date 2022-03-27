@@ -3,7 +3,7 @@
 // SC = O(n*numRows)
 // where n = length of the input string
 
-class Solution {
+class SolutionA {
     public String convert(String str, int numRows) {
         if(numRows==1) {
             return str;
