@@ -5,9 +5,7 @@
 
 class SolutionA {
     public int[][] merge(int[][] intervals) {
-        int m = intervals.length;
-        int[][] result = new int[m][2];
-        int size = 0;
+        List<int[]> result = new ArrayList<>();
         
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
         
@@ -21,7 +19,7 @@ class SolutionA {
                 cur[1] = Math.max(cur[1], intervals[i][1]);
             }
             else {
-                result[size++] = cur;
+                result.add(cur);
                 cur = new int[2];
                 cur[0] = intervals[i][0];
                 cur[1] = intervals[i][1];
@@ -29,8 +27,13 @@ class SolutionA {
             i++;
         }
         
-        result[size++] = cur;
+        result.add(cur);
+        int[][] resultArr = new int[result.size()][2];
         
-        return result;
+        for(i=0;i<result.size();i++) {
+            resultArr[i] = result.get(i);
+        }
+        
+        return resultArr;
     }
 }
