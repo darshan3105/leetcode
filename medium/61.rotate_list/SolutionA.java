@@ -13,7 +13,7 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+class SolutionA {
     public ListNode rotateRight(ListNode head, int k) {
         if(head == null) {
             return head;
