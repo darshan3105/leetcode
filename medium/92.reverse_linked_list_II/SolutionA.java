@@ -19,20 +19,18 @@ class Solution {
         ListNode nextToRight = getNodeAt(head, r+1);
         ListNode prevToLeft = getNodeAt(head, l-1);
         
-        int freq = r-l;
         ListNode prev = prevToLeft,cur=left,next=null;
         if(cur!=null) {
             next = cur.next;
         }
         
-        while(freq>=0) {
+        for(int i=0;i<r-l+1;i++) {
             cur.next = prev;
             prev = cur;
             cur = next;
             if(cur!=null) {
                 next = cur.next;
             }
-            freq--;
         }
         
         if(prevToLeft!=null) {
