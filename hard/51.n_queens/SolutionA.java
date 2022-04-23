@@ -1,5 +1,8 @@
 // https://leetcode.com/problems/n-queens/
 
+import java.util.ArrayList;
+import java.util.List;
+
 class SolutionA {
     
     List<List<String>> result = new ArrayList<>();
