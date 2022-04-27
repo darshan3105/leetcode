@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 // https://leetcode.com/problems/merge-intervals/
 // TC: O(nlogn)
 // SC: O(1) excluding the space required to store the result
