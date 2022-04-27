@@ -2,4 +2,4 @@ Hello folks, this is my attempt at building the habit on solving a DSA interview
 
 Important problems before interview:
 
-https://leetcode.com/problems/simplify-path/
+https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
