@@ -7,9 +7,6 @@ class Solution {
     
     public int reversePairs(int[] nums) {
         mergeSort(nums, 0, nums.length-1);
-        for(int i=0;i<nums.length;i++) {
-            System.out.print(nums[i] + " ");
-        }
         return result;
     }
     
@@ -48,7 +45,7 @@ class Solution {
             arr2[i-m-1] = nums[i];
         }
         
-        int ptr1=0,ptr2=0,cur=l;
+        int ptr1=0,ptr2=0;
         while(ptr1<arr1.length && ptr2<arr2.length) {
             if(arr1[ptr1] < arr2[ptr2]) {
                 nums[l++] = arr1[ptr1];
