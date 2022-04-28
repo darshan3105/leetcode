@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 // https://leetcode.com/problems/largest-rectangle-in-histogram/
 // TC: O(n)
 // SC: O(n) where n is the length of heights array
