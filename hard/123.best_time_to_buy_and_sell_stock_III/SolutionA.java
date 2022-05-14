@@ -16,19 +16,12 @@ class SolutionA {
         int result = 0;
         int leftMin = Integer.MAX_VALUE;
         for(int i=0;i<prices.length;i++) {
-            while(stack.peek()<i) {
+            while(!stack.isEmpty() && stack.peek()<i) {
                 stack.pop();
             }
-            
-            if(i==0) {
-                rightProfit = Math.max(0,prices[stack.peek()] - prices[0]);
-            }
-            else {
-                leftMin = Math.min(leftMin, prices[i-1]);
-                leftProfit = Math.max(leftProfit, prices[i-1]-leftMin);
-                rightProfit = Math.max(0,prices[stack.peek()] - prices[i]);
-                
-            }
+            leftMin = i==0 ? Integer.MAX_VALUE : Math.min(leftMin, prices[i-1]);
+            leftProfit = i==0 ? 0 : Math.max(leftProfit, prices[i-1]-leftMin);
+            rightProfit = stack.isEmpty() ? 0 : Math.max(0,prices[stack.peek()] - prices[i]);
             result = Math.max(result, rightProfit+leftProfit);
         }
         
