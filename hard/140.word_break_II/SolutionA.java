@@ -24,6 +24,7 @@ class SolutionA {
                 }
             }
         }
+        
         return dp[s.length()-1];
     }
 }
