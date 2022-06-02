@@ -30,12 +30,7 @@ class SolutionA {
             }
             else {
                 ListNode next = cur.next;
-                if(prev!=null) {
-                    prev.next=next;
-                }
-                else {
-                    prev=cur;
-                }
+                prev.next=next;
                 if(innerPrev==null) {
                     head=cur;
                 }
