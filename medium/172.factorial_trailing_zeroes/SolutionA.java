@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/factorial-trailing-zeroes/
-// TC: O(n*log2(n)*log5(n))
+// TC: O(n*(log2(n)+log5(n)))
 // SC: O(1)
 
 class SolutionA {
