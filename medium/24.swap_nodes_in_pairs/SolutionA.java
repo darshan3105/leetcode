@@ -3,42 +3,36 @@
 // SC: O(1)
 // where n is the length of the List
 
-public class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {
-
-    }
-    ListNode(int val) { 
-        this.val = val; 
-    }
-    ListNode(int val, ListNode next) { 
-        this.val = val; 
-        this.next = next;
-    }; 
-}
-
-public class SolutionA {
+**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class SolutionA {
     public ListNode swapPairs(ListNode head) {
-        ListNode cur = head;
+        ListNode curr = head;
         ListNode prev = null;
-        boolean firstSwap = true;
-        while(cur!=null && cur.next!=null) {
-            ListNode next = cur.next;
-            cur.next = cur.next.next;
-            next.next = cur;
-            if(prev!=null) {
+        while(curr!=null && curr.next!=null) {
+            ListNode next = curr.next;
+            ListNode nextToNext = next.next;
+            if (prev==null) {
+                prev = next;
+                head = prev;
+            } else {
                 prev.next = next;
             }
-            
-            prev = cur;
-            cur = cur.next;
-            if(firstSwap) {
-                head = next;
-                firstSwap = false;
-            }
+            next.next=curr;
+            curr.next = nextToNext;
+
+            prev = curr;
+            curr = curr.next;
         }
-        
+
         return head;
     }
 }
