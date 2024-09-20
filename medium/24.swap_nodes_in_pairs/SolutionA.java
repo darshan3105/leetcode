@@ -3,7 +3,7 @@
 // SC: O(1)
 // where n is the length of the List
 
-**
+/**
  * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
